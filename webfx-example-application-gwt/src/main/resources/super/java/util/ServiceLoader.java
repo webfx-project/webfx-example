@@ -20,7 +20,7 @@ public class ServiceLoader<S> implements Iterable<S> {
             case "dev.webfx.platform.shared.services.resource.spi.ResourceServiceProvider": return new ServiceLoader<S>(dev.webfx.platform.gwt.services.resource.spi.impl.GwtResourceServiceProvider::new);
             case "dev.webfx.platform.shared.services.scheduler.spi.SchedulerProvider": return new ServiceLoader<S>(dev.webfx.platform.gwt.services.uischeduler.spi.impl.GwtUiSchedulerProvider::new);
             case "dev.webfx.platform.shared.services.shutdown.spi.ShutdownProvider": return new ServiceLoader<S>(dev.webfx.platform.gwt.services.shutdown.spi.impl.GwtShutdownProvider::new);
-            case "javafx.application.Application": return new ServiceLoader<S>(org.example.ExampleApplication::new, org.example.webfxexample.WebFxExampleApplication::new);
+            case "javafx.application.Application": return new ServiceLoader<S>(org.example.webfxexample.WebFxExampleApplication::new);
 
             // UNKNOWN SPI
             default:

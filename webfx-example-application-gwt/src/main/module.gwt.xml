@@ -96,7 +96,6 @@
     <inherits name="org.gwtproject.nio.GwtNioSupport"/>
     <!--===========================< webfx-example-application >============================-->
     <!-- used by webfx-example-application-gwt (APPLICATION) -->
-    <source path="org/example"/>
     <source path="org/example/webfxexample"/>
     <!--=================================< webfx-kit-gwt >==================================-->
     <!-- used by webfx-example-application-gwt (IMPLICIT_PROVIDER) -->
