@@ -33,7 +33,7 @@ public class WebFxExampleApplication extends Application {
             timeline.play();
         });
         root.setBackground(new Background(new BackgroundFill(LinearGradient.valueOf("to right, #B2F4B6, #3BF0E4, #C2A0FD, #EA5DAD, #FF7571, #FFE580"), null, null)));
-        primaryStage.setScene(new Scene(root, 800, 600, Color.TRANSPARENT));
+        primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
     }
 
