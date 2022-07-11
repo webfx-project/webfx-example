@@ -10,7 +10,7 @@
     </dependencies>
 
     <providers>
-        <javafx.application.Application>org.example.webfxexample.WebFxExampleApplication</javafx.application.Application>
+        <provider interface="javafx.application.Application">org.example.webfxexample.WebFxExampleApplication</provider>
     </providers>
 
 </project>
