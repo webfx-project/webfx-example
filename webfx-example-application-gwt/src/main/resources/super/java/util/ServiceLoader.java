@@ -3,6 +3,8 @@ package java.util;
 
 import java.util.logging.Logger;
 
+import dev.webfx.kit.launcher.spi.impl.gwt.GwtWebFxKitLauncherProvider;
+import dev.webfx.kit.mapper.spi.impl.gwt.GwtWebFxKitHtmlMapperProvider;
 import dev.webfx.platform.boot.spi.impl.gwt.GwtApplicationBooterProvider;
 import dev.webfx.platform.console.spi.impl.gwt.GwtConsoleProvider;
 import dev.webfx.platform.shutdown.spi.impl.gwt.GwtShutdownProvider;
@@ -15,8 +17,8 @@ public class ServiceLoader<S> implements Iterable<S> {
 
     public static <S> ServiceLoader<S> load(Class<S> serviceClass) {
         switch (serviceClass.getName()) {
-            case "dev.webfx.kit.launcher.spi.WebFxKitLauncherProvider": return new ServiceLoader<S>(dev.webfx.kit.launcher.spi.gwt.GwtWebFxKitLauncherProvider::new);
-            case "dev.webfx.kit.mapper.spi.WebFxKitMapperProvider": return new ServiceLoader<S>(dev.webfx.kit.mapper.spi.gwt.GwtWebFxKitHtmlMapperProvider::new);
+            case "dev.webfx.kit.launcher.spi.WebFxKitLauncherProvider": return new ServiceLoader<S>(GwtWebFxKitLauncherProvider::new);
+            case "dev.webfx.kit.mapper.spi.WebFxKitMapperProvider": return new ServiceLoader<S>(GwtWebFxKitHtmlMapperProvider::new);
             case "dev.webfx.platform.uischeduler.spi.UiSchedulerProvider": return new ServiceLoader<S>(GwtUiSchedulerProvider::new);
             case "dev.webfx.platform.resource.spi.impl.gwt.GwtResourceBundle": return new ServiceLoader<S>();
             case "dev.webfx.platform.boot.spi.ApplicationBooterProvider": return new ServiceLoader<S>(GwtApplicationBooterProvider::new);
